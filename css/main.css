@@ -1,0 +1,169 @@
+/*
+----------------------------
+    Variable Definitions
+----------------------------
+*/
+
+:root {
+    /* Color Palette */
+    --gray-100: #161616;
+    --gray-90: #262626;
+    --gray-80: #393939;
+    --gray-70: #525252;
+    --gray-60: #6F6F6F;
+    --gray-50: #8D8D8D;
+    --gray-40: #A8A8A8;
+    --gray-30: #C6C6C6;
+    --gray-20: #E0E0E0;
+    --gray-10: #F4F4F4;
+
+    --white: #FFFFFF;
+
+    --blue-100: none;
+    --blue-90: none;
+    --blue-80: none;
+    --blue-70: none;
+    --blue-60: none;
+    --blue-50: none;
+    --blue-40: none;
+    --blue-30: none;
+    --blue-20: none;
+    --blue-10: none;
+
+
+    --red-100: #DA1E28;
+    --orange-100: #FF832B;
+    --yellow-100: #FDDC69;
+    --green-100: #198038;
+
+
+    /* Color Variables */
+    --background-main: var(--gray-100);
+    --font-color-main: var(--gray-10);
+
+    /* Typography */
+    --font-type-main: Arial;
+    --base-type-size: 16px;
+    --fsize-1: 0.75rem;
+    --fsize-2: 0.875rem;
+    --fsize-3: 1rem;
+    --fsize-4: 1.125rem;
+    --fsize-5: 1.25rem;
+    --fsize-6: 1.5rem;
+    --fsize-7: 2rem;
+    --fsize-9: 2.25rem;
+    --fsize-10: 2.625rem;
+    --fsize-11: 3rem;
+    --fsize-12: 3.375rem;
+    --fsize-13: 3.75rem;
+    --fsize-14: 4.25rem;
+    --fsize-15: 4.75rem;
+    --fsize-16: 5.25rem;
+    --fsize-17: 5.75rem;
+
+    /* Spacing */
+    /* Also used for the sizing of objects (padding, margin, width, height etc.) */
+    --spacing-1: 0.125rem;
+    --spacing-2: 0.25rem;
+    --spacing-3: 0.50rem;
+    --spacing-4: 0.75rem;
+    --spacing-5: 1rem;
+    --spacing-6: 1.5rem;
+    --spacing-7: 2rem;
+    --spacing-8: 2.5rem;
+    --spacing-9: 3rem;
+    --spacing-10: 4rem;
+    --spacing-11: 5rem;
+    --spacing-12: 6rem;
+    --spacing-13: 10rem;
+}
+
+/*
+----------------------------
+    General Responsive Behavior
+----------------------------
+*/
+
+@media (min-width: 320px) and (max-width: 1055px) {
+    html {
+        font-size: var(--fsize-2);
+    }
+}
+
+@media (min-width: 673px) and (max-width: 1055px) {
+
+}
+
+@media (min-width: 1056px) {
+    html {
+        font-size: var(--base-type-size);
+    }
+}
+
+/*
+----------------------------
+    General Styling
+----------------------------
+*/
+
+html {
+    /* Typography */
+    color: var(--font-color-main);
+    font-family: var(--font-type-main);
+
+    /* Visuals */
+    background-color: var(--background-main);
+}
+
+p,
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    /* Typography */
+    color: var(--fcolor-link);
+    text-decoration: none;
+}
+
+a:hover {
+    /* Display */
+    border-bottom: 1px solid var(--fcolor-link);
+}
+
+header {
+    /* Display */
+    height: var(--spacing-7);
+    padding-left: var(--spacing-6);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    row-gap: var(--spacing-3);
+
+    border-bottom: 2px solid var(--gray-10);
+
+    /* Typography */
+    color: var(--font-color-main);
+    text-align: left;
+
+    
+}
+
+.canvas-area {
+    /* Display */
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-6);
+}
+
+#canvas {
+    /* Display */
+    width: 100%;
+    /* border: 2px solid var(--gray-10); */
+}

@@ -1,0 +1,13 @@
+.canvas-area {
+    /* Display */
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: auto;
+    grid-template-areas: ". canvas .";
+    justify-items: center;
+    align-items: center;
+}
+
+#canvas {
+    grid-area: canvas;
+}
