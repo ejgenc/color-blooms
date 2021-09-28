@@ -16,13 +16,13 @@ function windowResized() {
 }
 
 function draw () {
-    color_blooms(shapeType="circle", shapeMode=CENTER, shapeCount=50,
-                 shapeSize=150, sizeEnd=5, sizeIncrement=15, sizeIncNoise="none",
+    color_blooms(shapeType="circle", shapeMode=CENTER, shapeCount=150,
+                 shapeSize=150, sizeEnd=5, sizeIncrement=15, sizeIncNoise="medium",
                  squareArgs={}, 
-                 sat=50, satNoise="none", hRange=[0, 360], hIncrement=5, hIncNoise = "none",
-                 bStart=0, bIncrement=5, bIncNoise="none", bDirection="increasing",
-                 startXNoise="none", startYNoise="none",
-                 canvasBackground=(0, 60, 0));
+                 sat=70, satNoise="high", hRange=[0, 360], hIncrement=5, hIncNoise = "medium",
+                 bStart=80, bIncrement=5, bIncNoise="low", bDirection="decreasing",
+                 startXNoise="medium", startYNoise="medium",
+                 canvasBackground=(0, 60, 100));
     
 }
 
