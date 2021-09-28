@@ -1,5 +1,5 @@
 # Color Blooms (WIP)
-<img src="images/banner.png" width=100%>
+<img src="media/images/banner.png" width=100%>
 
 ## What is Color Blooms?
 Color Blooms is an interactive creative coding project written with p5.js.
