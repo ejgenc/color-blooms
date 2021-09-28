@@ -14,7 +14,6 @@ This repository contains the source code for the project. The project is hosted
 on [GitHub pages](https://ejgenc.github.io/color-blooms/) for now, but in the future will move to a dedicated website.
 
 ## Project  Organization
-Below is a document tree of this project for those who wish to explore further.
 --------
 ```
     |
