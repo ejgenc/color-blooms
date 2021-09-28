@@ -17,7 +17,7 @@ function windowResized() {
 
 function draw () {
     color_blooms(shapeType="circle", shapeMode=CENTER, shapeCount=150,
-                 shapeSize=150, sizeEnd=5, sizeIncrement=15, sizeIncNoise="medium",
+                 shapeSize=150, sizeEnd=5, sizeIncrement=15, shapeSizeNoice="medium", sizeIncNoise="medium",
                  squareArgs={}, 
                  sat=70, satNoise="high", hRange=[0, 360], hIncrement=5, hIncNoise = "medium",
                  bStart=80, bIncrement=5, bIncNoise="low", bDirection="decreasing",
@@ -27,7 +27,7 @@ function draw () {
 }
 
 function color_blooms(shape, shapeMode, shapeCount,
-                      shapeSize, sizeEnd, sizeIncrement, sizeIncNoise="none",
+                      shapeSize, sizeEnd, sizeIncrement, shapeSizeNoice="none", sizeIncNoise="none",
                       squareArgs,
                       sat=50, satNoise="none", hRange, hIncrement, hIncNoise="none",
                       bStart=70, bIncrement, bIncNoise="none", bDirection="decreasing",
@@ -41,6 +41,14 @@ function color_blooms(shape, shapeMode, shapeCount,
                           "decreasing": 1};
 
     let noiseDict = {
+
+        shapeSizeNoiceD: {"none":[0, 0],
+                          "low": [-10, 10],
+                          "medium": [-20, 20],
+                          "high": [-40, 40]
+
+        },
+
         sizeIncNoiseD: {"none": [0, 0],
                        "low": [-2, 2],
                        "medium": [-4, 4],
@@ -91,7 +99,8 @@ function color_blooms(shape, shapeMode, shapeCount,
         let startX = random(0, canvas.clientWidth);
         let startY = random(0, canvas.clientHeight);
 
-        let size = shapeSize;
+        let size = shapeSize + random(noiseDict.shapeSizeNoiceD[shapeSizeNoice][0],
+                                      noiseDict.shapeSizeNoiceD[shapeSizeNoice][1]);
         let h = random(hRange[0], hRange[1]);
         let s = sat + random(noiseDict.satNoiseD[satNoise][0],
                              noiseDict.satNoiseD[satNoise][1]);
